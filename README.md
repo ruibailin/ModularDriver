@@ -9,3 +9,9 @@ In order to debug linux driver in IDE like a hello word program, we need to cut 
 1. Head: declaration and framework of Linux driver.
 2. Foot: directly read and write registers of hardware.
 Also we need to encapsulate all Linux kernel API.
+
+There are four modularized Linux or baremental driver:
+1. IPC_cve: CVE(computor vision engine) is a module for image recognition. In order to test the driver, i wrote a software CVE which can be implemented in kernel or user mode.
+2. ISL79987: This is a V4L2 driver for ISL79987 
+3. Reg_IO: a driver to read and write register on the SOC board, according to the command comes from up computor. So I include driver and app.
+4. usb-2: a driver rewriten or reconstructed according to the old synopsys usb2.0 baremental driver.
