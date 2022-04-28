@@ -1,0 +1,23 @@
+TOPDIR			:= ../V02R02/code/ZX296805SDK
+SRCDIRS			:= src		\
+			src/sw_cve 	\
+			src/sw_cve/2blk src/sw_cve/3opr src/sw_cve/4reg src/sw_cve/5cve  \
+			src/hw_cve 	\
+			src/hw_cve/1ram src/hw_cve/2reg src/hw_cve/3cve src/hw_cve/3opr  \
+			src/test	\
+			src/app		\
+			src/app/2sdl src/app/3ffmpeg
+
+TARGET_DRV		:= ive_app
+#CFLAGS			+= -I$(TOPDIR)/include/
+
+# 需要绝对路径以免在编译驱动时出错
+# 以下请勿修改
+
+ifeq (0,${MAKELEVEL})
+MK_FILE	= $(shell cd $(shell pwd)/$(TOPDIR)/build; pwd)/config.mk
+#@echo ${MK_FILE}
+export MK_FILE
+endif
+
+include $(MK_FILE)

@@ -1,0 +1,1 @@
+cmd_/mnt/steve/code/imx6sm/reg/cmd/src/drv/reg_drv.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /mnt/steve/code/imx6sm/reg/cmd/src/drv/reg_drv.ko /mnt/steve/code/imx6sm/reg/cmd/src/drv/reg_drv.o /mnt/steve/code/imx6sm/reg/cmd/src/drv/reg_drv.mod.o ;  true
